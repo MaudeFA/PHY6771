@@ -94,6 +94,11 @@ c        Calcul ETR pour modele corrige
 c
  502  continue
 c
+c     Recalculer structure
+      call recalculstruct(ND,xlogg)
+c     Calcul ETR pour modele corrige
+      call spectre(ND,xlogg)
+c
 c     probleme1
       open(1,file='dev5prob1.txt',status='old')
       do id=1,ND
